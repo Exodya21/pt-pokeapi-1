@@ -2,7 +2,7 @@ import React from "react";
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
 
-import App from '../components/App.js';
+import CardList from '../components/CardList.js';
 
 let containerTest = null;
 beforeEach(() => {
@@ -20,7 +20,7 @@ afterEach(() => {
 
 it("renderizado de texto", () => {
   act(() => {
-    render(<App />, containerTest);
+    render(<CardList />, containerTest);
   });
   // expect(containerTest.textContent).toBe("Edit src/App.js and save to reload");
   expect(containerTest.querySelector("a").textContent).toBe("Learn React");

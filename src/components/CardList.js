@@ -1,7 +1,7 @@
 import logo from '../assets/logo.svg';
-import '../styles/App.css';
+import '../styles/CardList.css';
 
-function App() {
+export default function CardList() {
   return (
     <div className="App">
       <header className="App-header">
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App;
+
