@@ -18,10 +18,10 @@ afterEach(() => {
   containerTest = null;
 });
 
-it("renderizado de texto", () => {
+it("Renderizado del Titulo :", () => {
   act(() => {
     render(<CardList />, containerTest);
   });
   // expect(containerTest.textContent).toBe("Edit src/App.js and save to reload");
-  expect(containerTest.querySelector("a").textContent).toBe("Learn React");
+  expect(containerTest.querySelector("h1").textContent).toBe("Pokimon");
 });

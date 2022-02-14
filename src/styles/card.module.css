@@ -1,0 +1,11 @@
+.container {
+    background-color: aquamarine;
+    height: 20vh;
+    border-radius: 15px;
+}
+.container img {
+    color: black;
+}
+.container p {
+    color: black;
+}
