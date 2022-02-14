@@ -1,11 +1,13 @@
 .container {
     background-color: aquamarine;
-    height: 20vh;
+    /* height: 20vh; */
     border-radius: 15px;
 }
 .container img {
     color: black;
+    width: 50%;
 }
 .container p {
-    color: black;
+    color: red!important;
+    margin-bottom: 10%;
 }
