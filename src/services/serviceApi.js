@@ -15,3 +15,7 @@ export async function getPokeNameANDUrl() {
 export async function getData(url) {
     return axios.get(url);
 }
+
+export async function getPokeByName(pokeName) {
+    return axios.get("https://pokeapi.co/api/v2/pokemon/" + pokeName);
+}

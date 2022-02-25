@@ -14,6 +14,7 @@ export default function CardList() {
     getPokeNameANDUrl()
     .then( res =>  {
       const info1 = res.results
+      console.log(info1)
       setNameANDurl(info1)
       setExist(true)
       
@@ -30,7 +31,7 @@ export default function CardList() {
       <main>
         
         <h1>Pokimon</h1>
-        <div class={Style.grid_container}>
+        <div className={Style.grid_container}>
           
           {
             exist ? 
@@ -38,7 +39,7 @@ export default function CardList() {
             console.log(nameANDurl),
             nameANDurl.map(
               (poke, index) => (
-                <div class={Style.grid_item}>
+                <div className={Style.grid_item}>
                   <Card pokemon={poke} key={index}/>
                 </div>
                 )

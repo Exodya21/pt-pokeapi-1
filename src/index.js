@@ -3,11 +3,22 @@ import ReactDOM from 'react-dom';
 import './styles/index.css';
 import CardList from './components/CardList.js';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { DeatailCard } from './components/DeatailCard';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <CardList />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes>
+
+      <Route path='/' element={<CardList />} /> 
+        <Route path='/pokemon/:id' element={<DeatailCard />} />
+
+
+      
+
+    </Routes>
+  </BrowserRouter>,
+  
   document.getElementById('root')
 );
 
