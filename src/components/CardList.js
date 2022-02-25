@@ -1,5 +1,5 @@
 import logo from '../assets/pokeball.png';
-import '../styles/cardList.css';
+import Style from '../styles/cardList.module.css';
 import Card from "./Card"
 import {getPokeNameANDUrl, getData} from "../services/serviceApi";
 import { useEffect, useState } from 'react';
@@ -23,25 +23,33 @@ export default function CardList() {
   }, [])
 
   return (
-    <div className="App App-header">
+    <div className={Style.App_header}>
       <header>
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={logo} className={Style.Ap_logo} alt="logo" />
       </header>
       <main>
         
         <h1>Pokimon</h1>
-        {
-          exist ? 
-          (
-          console.log(nameANDurl),
-          nameANDurl.map(
-            (poke, index) => (
-              <Card pokemon={poke} key={index}/>)
+        <div class={Style.grid_container}>
+          
+          {
+            exist ? 
+            (
+            console.log(nameANDurl),
+            nameANDurl.map(
+              (poke, index) => (
+                <div class={Style.grid_item}>
+                  <Card pokemon={poke} key={index}/>
+                </div>
+                )
+              )
             )
-          )
-          :
-          <p>Loading ...</p>
-        }
+            :
+            <p>Loading ...</p>
+          }
+
+        </div>
+
       </main>
     </div>
   );
